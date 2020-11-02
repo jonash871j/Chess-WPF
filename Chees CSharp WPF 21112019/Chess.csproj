@@ -203,9 +203,6 @@
     <Resource Include="Resources\Background\wood.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\zbc.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icon\InformationSymbol_16x.png" />
     <Resource Include="Resources\Icon\ChessIcon.png" />
     <Resource Include="Resources\Icon\ConfigIcon.bmp" />

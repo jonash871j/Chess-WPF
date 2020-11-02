@@ -16,13 +16,13 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="./Resources/Icon/ChessIcon.png" Width="32" Height="32" HorizontalAlignment="Left" Margin="12, 0, 0, 16"/>
                 <StackPanel Margin="8, 8" Grid.ColumnSpan="2">
-                    <Image Source="./Resources/zbc.bmp" Width="160" Height="56" VerticalAlignment="Top"/>
+                    <Image Width="160" Height="56" VerticalAlignment="Top"/>
                     <Separator/>
                     <StackPanel Margin="48, 8">
                         <TextBlock Text="Chess, by Jonas"/>
                         <Separator/>
                         <TextBlock x:Name="softwareVersion"/>
-                        <TextBlock Text="© 2019 ZBC, Roskilde"/>
+                        <TextBlock Text="2019"/>
                     </StackPanel>
                 </StackPanel>
                 <Button Margin="16, 16" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="80" Height="24" Click="Button_Click" Grid.Column="1">OK</Button>
