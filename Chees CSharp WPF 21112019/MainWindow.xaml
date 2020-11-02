@@ -1,0 +1,85 @@
+﻿<Window x:Class="Chees_CSharp_WPF_21112019.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chees_CSharp_WPF_21112019"
+        mc:Ignorable="d"
+        Title="Chess" Height="800" Width="800" 
+        Icon="./Resources/Icon/ChessIcon.ico"
+        MinHeight="800" MinWidth="600" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize">
+    
+    <Grid>
+        <Grid.Background>
+            <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,64,64" ImageSource="./Resources/Background/background.bmp"/>
+        </Grid.Background>
+        <StackPanel>
+
+            <Grid>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="Game">
+                        <MenuItem Header="New Game" Click="MenuItem_NewGame" InputGestureText="F1"/>
+                        <Separator/>
+                        <MenuItem x:Name="MT_fullScreen" Header="Fullscreen" Click="MT_fullScreen_Click" IsCheckable="True" InputGestureText="F12"/>
+                        <MenuItem Header="Config" Click="MenuItem_ConfigGame">
+                            <MenuItem.Icon>
+                                <Image Source="./Resources/Icon/ConfigIcon.bmp"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="About" Click="MenuItem_About">
+                            <MenuItem.Icon>
+                                <Image Source="./Resources/Icon/InformationSymbol_16x.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_Exit" Click="MenuItem_Exit"/>
+                </Menu>
+            </Grid>
+            <Separator Background="Gray" Margin="0 0"/>
+        </StackPanel>
+
+        <!--UI-->
+        <TextBlock x:Name="UI01" FontSize="64px" FontFamily="Lucida Calligraphy" Text="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 12"/>
+        <TextBlock x:Name="UI02" FontSize="64px" FontFamily="Lucida Calligraphy" Text="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 6"/>
+        <TextBlock x:Name="UI03" FontSize="40px" FontFamily="Lucida Calligraphy" Text="Blacks's turn" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12 28"/>
+        <TextBlock x:Name="UI04" FontSize="40px" FontFamily="Lucida Calligraphy" Text="White's turn" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="12 12"/>
+        
+        <TextBlock x:Name="UI_TimerSec" FontSize="32px" FontFamily="Lucida Calligraphy" Text="00" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="12 12"/>
+        <TextBlock x:Name="UI_TimerCol" FontSize="32px" FontFamily="Lucida Calligraphy" Text=":" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="12, 0, 54, 12"/>
+        <TextBlock x:Name="UI_TimerMin" FontSize="32px" FontFamily="Lucida Calligraphy" Text="00" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="12, 0, 64, 12"/>
+        
+        <!--Chessboard-->
+        <Grid Height="575" Width="575" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.Background>
+                <ImageBrush ImageSource="./Resources/Background/Wood.png"/>
+            </Grid.Background>
+            
+            <Grid x:Name="gridMain" Width="512" Height="512">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
